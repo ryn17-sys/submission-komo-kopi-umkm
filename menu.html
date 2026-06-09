@@ -1,85 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMOKOPI — Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="menu.css">
+</head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="about.html">Tentang Kami</a>
-            <a href="menu.html">Menu</a>
+            <a href="menu.html" class="active">Menu</a>
         </nav>
     </header>
 
     <main>
-
-        <!-- Menu -->
-        <section id="menu">
-            <h1>Menu Kami</h1>
-
-            <!-- Coffee -->
-            <section class="menu-category">
-                <h2>Coffee</h2>
-
-                <article class="menu-item"></article>
-                <article class="menu-item"></article>
-            </section>
-
-            <!-- Non Coffee -->
-            <section class="menu-category">
-                <h2>Non Coffee</h2>
-
-                <article class="menu-item"></article>
-                <article class="menu-item"></article>
-            </section>
-
-            <!-- Food -->
-            <section class="menu-category">
-                <h2>Food</h2>
-
-                <article class="menu-item"></article>
-                <article class="menu-item"></article>
-            </section>
-
-            <!-- Dessert -->
-            <section class="menu-category">
-                <h2>Dessert</h2>
-
-                <article class="menu-item"></article>
-                <article class="menu-item"></article>
-            </section>
+        <section id="hero-sub" style="padding:0; max-width:100%;">
+            <div class="hero-image"></div>
+            <div class="hero-content">
+                <h1>Daftar Menu</h1>
+                <p class="tagline">Eksplorasi Rasa dari Biji Kopi Pilihan</p>
+            </div>
         </section>
 
-        <!-- Best Seller -->
-        <section id="best-seller">
-            <h2>Best Seller</h2>
+        <section id="coffee-menu" style="max-width:100%; padding: 6rem 3rem;">
+            <div style="max-width:1200px; margin:0 auto;">
+                <span class="section-label">Signature & Classics</span>
+                <h2>Kome</h2>
+                <h3>Es kopi susu creamy</h3>
+                
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Kome</div>
+                            <div class="desc">Perpaduan espresso dan susu yang lembut dengan rasa kopi yang seimbang dan mudah dinikmati.</div>
+                            <div class="price">Rp 25.000</div>
+                        </div>
+                    </article>
 
-            <article class="menu-item"></article>
-            <article class="menu-item"></article>
-            <article class="menu-item"></article>
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Kome Aren</div>
+                            <div class="desc">Espresso berpadu susu dan gula aren yang memberikan cita rasa manis karamel khas Nusantara.</div>
+                            <div class="price">Rp 25.000</div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Manual Brew V60</div>
+                            <div class="desc">Metode seduh manual menonjolkan notes unik dari biji kopi lokal Sulawesi, Toraja, atau Flores.</div>
+                            <div class="price">Rp 28.000</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <!-- Kontak -->
-        <section id="contact">
-            <h2>Kontak</h2>
+        <div class="divider"></div>
 
-            <div class="address"></div>
-            <div class="phone"></div>
-            <div class="email"></div>
+        <section id="non-coffee-menu" style="max-width:100%; padding: 6rem 3rem;">
+            <div style="max-width:1200px; margin:0 auto;">
+                <span class="section-label">Alternatif Segar</span>
+                <h2>Komo</h2>
+                <h3>Es Americano Basic bland 60/40 arabica</h3>
+                
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <div class="menu-item-img"
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Matcha Latte</div>
+                            <div class="desc">Teh hijau Jepang murni berkualitas tinggi disajikan dengan susu segar yang creamy.</div>
+                            <div class="price">Rp 26.000</div>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Choco Creamy</div>
+                            <div class="desc">Cokelat premium racikan artisan dengan tekstur kental dan rasa manis yang pas.</div>
+                            <div class="price">Rp 26.000</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <!-- Lokasi -->
-        <section id="location">
-            <h2>Lokasi</h2>
+        <div class="divider"></div>
 
-            <div class="map"></div>
+        <section id="snacks-menu" style="max-width:100%; padding: 6rem 3rem;">
+            <div style="max-width:1200px; margin:0 auto;">
+                <span class="section-label"></span>
+                <h2>Non Kopi</h2>
+                <h3>Minuman non-kopi untuk semua selera</h3>
+                
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Chocolate</div>
+                            <div class="desc"></div>
+                            <div class="price"></div>
+                        </div>
+                    </article>
 
-            <div class="operational-hours"></div>
-
-            <div class="social-media"></div>
+                    <article class="menu-item">
+                        <div class="menu-item-img">
+                        </div>
+                        <div class="menu-item-info">
+                            <div class="name">Matcha Latte</div>
+                            <div class="desc> </div>
+                            <div class="price">Rp 20.000</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 Nama Cafe</p>
+        <span class="footer-brand">KOMOKOPI</span>
+        <p>© 2026 Komokopi Cafe — Palu, Sulawesi Tengah</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+</html>
