@@ -1,0 +1,615 @@
+/* ============================================
+   KOMOKOPI — about.css
+   Tema konsisten dengan home.css
+   ============================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+	--black: #060606;
+	--white: #F3F3F3;
+	--accent: #c8a96e;
+	--accent-dark: #9e7f48;
+	--gray: #1a1a1a;
+	--gray-mid: #2e2e2e;
+	--muted: #888;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+	background: var(--black);
+	color: var(--white);
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+	overflow-x: hidden;
+}
+
+/* ── Google Fonts (sama seperti home) ── */
+/* Pastikan di <head> sudah ada link ke Playfair Display & DM Sans */
+
+/* ============================================
+   HEADER & NAV
+   ============================================ */
+
+header {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 100;
+	padding: 1.25rem 3rem;
+	display: flex;
+	justify-content: flex-end;
+	mix-blend-mode: difference;
+}
+
+nav {
+	display: flex;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--white);
+	font-size: 0.8rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	font-weight: 500;
+	opacity: 0.8;
+	transition: opacity 0.3s;
+}
+
+nav a:hover { opacity: 1; }
+nav a[href="about.html"] { opacity: 1; color: var(--accent); }
+
+/* ============================================
+   PAGE HERO (judul halaman)
+   ============================================ */
+
+.page-hero {
+	min-height: 38vh;
+	display: flex;
+	align-items: flex-end;
+	padding: 8rem 3rem 4rem;
+	position: relative;
+	border-bottom: 1px solid var(--gray-mid);
+	overflow: hidden;
+}
+
+.page-hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse at 20% 60%, rgba(200,169,110,0.07) 0%, transparent 65%);
+	pointer-events: none;
+}
+
+.page-hero-inner {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.page-hero .section-label {
+	font-size: 0.7rem;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1rem;
+	display: block;
+}
+
+#history h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(3rem, 8vw, 7rem);
+	font-weight: 900;
+	letter-spacing: -0.02em;
+	line-height: 0.95;
+	color: var(--white);
+	margin-bottom: 0;
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+
+section {
+	padding: 6rem 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+section h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: var(--white);
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+
+section h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 0.75rem;
+}
+
+section p {
+	color: #aaa;
+	font-size: 1rem;
+	line-height: 1.9;
+	margin-bottom: 1.25rem;
+}
+
+.section-label {
+	font-size: 0.7rem;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: var(--gray-mid);
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.divider-full {
+	width: 100%;
+	height: 1px;
+	background: var(--gray-mid);
+}
+
+/* ============================================
+   #history — Sejarah Cafe
+   ============================================ */
+
+#history {
+	padding-top: 0;
+	max-width: 100%;
+}
+
+.history-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 6rem 3rem;
+}
+
+.history-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	align-items: start;
+	margin-top: 3rem;
+}
+
+.history-text p {
+	color: #aaa;
+	font-size: 1rem;
+	line-height: 1.9;
+	margin-bottom: 1.25rem;
+}
+
+.history-aside {
+	position: sticky;
+	top: 6rem;
+}
+
+.history-year {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(5rem, 12vw, 9rem);
+	font-weight: 900;
+	line-height: 1;
+	color: var(--gray-mid);
+	letter-spacing: -0.04em;
+	margin-bottom: 1rem;
+}
+
+.history-quote {
+	border-left: 2px solid var(--accent);
+	padding-left: 1.5rem;
+	margin-top: 2rem;
+}
+
+.history-quote p {
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 1.1rem;
+	color: var(--white);
+	line-height: 1.6;
+	margin-bottom: 0.5rem;
+}
+
+.history-quote cite {
+	font-size: 0.75rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+/* ============================================
+   #vision-mission — Visi & Misi
+   ============================================ */
+
+#vision-mission {
+	max-width: 100%;
+	padding: 0;
+	background: var(--gray);
+	border-top: 1px solid var(--gray-mid);
+	border-bottom: 1px solid var(--gray-mid);
+}
+
+.vision-mission-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 6rem 3rem;
+}
+
+.vision-mission-inner h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: var(--white);
+	line-height: 1.1;
+	margin-bottom: 3rem;
+}
+
+.vm-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	margin-top: 2rem;
+}
+
+.vision,
+.mission {
+	padding: 2.5rem;
+	border: 1px solid var(--gray-mid);
+	position: relative;
+	transition: border-color 0.3s;
+}
+
+.vision:hover,
+.mission:hover {
+	border-color: var(--accent);
+}
+
+.vision::before,
+.mission::before {
+	content: attr(data-label);
+	display: block;
+	font-size: 0.65rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1.25rem;
+}
+
+.vision[data-label]::before { content: attr(data-label); }
+
+.vision h3,
+.mission h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 1rem;
+}
+
+.vision p,
+.mission p {
+	color: #aaa;
+	font-size: 0.95rem;
+	line-height: 1.85;
+	margin-bottom: 0;
+}
+
+/* ============================================
+   #concept — Konsep Cafe
+   ============================================ */
+
+#concept {
+	padding: 6rem 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.concept-layout {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 5rem;
+	align-items: start;
+	margin-top: 2rem;
+}
+
+.concept-label-col {
+	position: sticky;
+	top: 6rem;
+}
+
+.concept-label-col .concept-number {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(4rem, 10vw, 8rem);
+	font-weight: 900;
+	line-height: 1;
+	color: var(--gray-mid);
+	letter-spacing: -0.04em;
+}
+
+#concept h2 {
+	margin-bottom: 0;
+}
+
+#concept .concept-text p {
+	color: #aaa;
+	font-size: 1rem;
+	line-height: 1.9;
+	margin-bottom: 1.25rem;
+}
+
+/* ============================================
+   #advantages — Keunggulan
+   ============================================ */
+
+#advantages {
+	max-width: 100%;
+	padding: 0;
+	border-top: 1px solid var(--gray-mid);
+}
+
+.advantages-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 6rem 3rem;
+}
+
+.advantages-inner h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: var(--white);
+	line-height: 1.1;
+	margin-bottom: 3rem;
+}
+
+.advantages-inner ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.advantages-inner ul li {
+	display: grid;
+	grid-template-columns: 3rem 1fr;
+	gap: 2rem;
+	align-items: start;
+	padding: 2rem 0;
+	border-bottom: 1px solid var(--gray-mid);
+	transition: background 0.3s;
+}
+
+.advantages-inner ul li:first-child {
+	border-top: 1px solid var(--gray-mid);
+}
+
+.advantages-inner ul li .adv-number {
+	font-size: 0.7rem;
+	letter-spacing: 0.15em;
+	color: var(--accent);
+	padding-top: 0.25rem;
+	font-weight: 500;
+}
+
+.advantages-inner ul li .adv-content h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 0.5rem;
+}
+
+.advantages-inner ul li .adv-content p {
+	color: var(--muted);
+	font-size: 0.9rem;
+	line-height: 1.7;
+	margin-bottom: 0;
+}
+
+/* ============================================
+   #gallery — Galeri
+   ============================================ */
+
+#gallery {
+	padding: 6rem 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#gallery h2 {
+	margin-bottom: 3rem;
+}
+
+.gallery-category {
+	margin-bottom: 4rem;
+}
+
+.gallery-category:last-child {
+	margin-bottom: 0;
+}
+
+.gallery-category h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 1.25rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--gray-mid);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.gallery-category h3::before {
+	content: '';
+	display: inline-block;
+	width: 2rem;
+	height: 1px;
+	background: var(--accent);
+	flex-shrink: 0;
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.gallery-item {
+	aspect-ratio: 4/3;
+	overflow: hidden;
+	border-radius: 2px;
+	background: var(--gray);
+	position: relative;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.8) saturate(0.75);
+	transition: transform 0.7s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.06);
+	filter: brightness(0.95) saturate(0.9);
+}
+
+/* Placeholder jika gambar belum ada */
+.gallery-item-placeholder {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--gray);
+	color: var(--gray-mid);
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* interior: grid besar-kecil */
+.interior-gallery .gallery-grid {
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* event: 2 kolom */
+.event-gallery .gallery-grid {
+	grid-template-columns: 1fr 1fr;
+}
+
+.event-gallery .gallery-item {
+	aspect-ratio: 16/9;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+	padding: 2rem 3rem;
+	border-top: 1px solid var(--gray-mid);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer p {
+	font-size: 0.75rem;
+	color: var(--muted);
+	letter-spacing: 0.1em;
+}
+
+.footer-brand {
+	font-family: 'Playfair Display', serif;
+	font-size: 1rem;
+	color: var(--white);
+	letter-spacing: 0.1em;
+}
+
+/* ============================================
+   ANIMATIONS (sama seperti home)
+   ============================================ */
+
+@keyframes fadein { to { opacity: 1; } }
+
+@keyframes slidein {
+	from { opacity: 0; transform: translateY(20px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadein 0.8s ease forwards;
+}
+
+.slide-in {
+	opacity: 0;
+	animation: slidein 0.8s ease forwards;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+	header { padding: 1rem 1.5rem; }
+	nav { gap: 1.5rem; }
+
+	.page-hero { padding: 6rem 1.5rem 3rem; min-height: 30vh; }
+
+	section { padding: 4rem 1.5rem; }
+
+	.history-inner { padding: 4rem 1.5rem; }
+	.history-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+	.history-aside { position: static; }
+
+	.vision-mission-inner { padding: 4rem 1.5rem; }
+	.vm-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+	#concept { padding: 4rem 1.5rem; }
+	.concept-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+	.concept-label-col { position: static; }
+
+	.advantages-inner { padding: 4rem 1.5rem; }
+	.advantages-inner ul li { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+
+	#gallery { padding: 4rem 1.5rem; }
+	.gallery-grid,
+	.interior-gallery .gallery-grid,
+	.event-gallery .gallery-grid { grid-template-columns: 1fr 1fr; }
+
+	.interior-gallery .gallery-grid { grid-template-columns: 1fr; }
+
+	footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+	nav { gap: 1rem; }
+	nav a { font-size: 0.7rem; }
+
+	.gallery-grid,
+	.event-gallery .gallery-grid { grid-template-columns: 1fr; }
+}
