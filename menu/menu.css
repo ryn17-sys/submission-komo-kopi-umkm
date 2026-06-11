@@ -94,11 +94,7 @@ main {
 .hero__backdrop {
 	position: absolute;
 	inset: 0;
-	background:
-		linear-gradient(180deg, rgba(9, 8, 7, 0.25), rgba(9, 8, 7, 0.86)),
-		url('../asset/Menu/kome/kome%20aren.jpeg') center center / cover no-repeat;
-	filter: saturate(0.8) brightness(0.38);
-	transform: scale(1.04);
+	background: #080706
 }
 
 .hero__content {
